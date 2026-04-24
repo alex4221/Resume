@@ -1,169 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gobinda Chandra Pradhan - Cyber Security Analyst</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        .header {
-            text-align: center;
-            border-bottom: 2px solid #0066cc;
-            padding-bottom: 10px;
-        }
-        h1 {
-            font-size: 2em;
-            margin: 0;
-        }
-        .contact-info {
-            margin: 10px 0;
-        }
-        .contact-info a {
-            color: #0066cc;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-        .section h2 {
-            border-bottom: 2px solid #0066cc;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            color: #0066cc;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #e9f4fe;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .experience-header h3 {
-            margin: 0;
-        }
-        .experience-header span {
-            font-weight: bold;
-            color: #555;
-        }
-        .skills, .education, .certifications, .hobbies {
-            background: #e9f4fe;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-    </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Gobinda Chandra Pradhan</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a0f;
+  --surface:#13131a;
+  --card:#1a1a24;
+  --accent:#4f8ef7;
+  --accent2:#7c5cfc;
+  --text:#f0f0f5;
+  --muted:#8888a8;
+  --border:#2a2a3a;
+}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;font-size:16px;line-height:1.7;scroll-behavior:smooth}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,0.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-size:18px;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:14px;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+
+/* SECTIONS */
+section{padding:100px 2rem}
+.container{max-width:1100px;margin:0 auto}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(79,142,247,0.12),transparent)}
+.hero-content{max-width:700px}
+.hero-tag{display:inline-block;background:rgba(79,142,247,0.15);color:var(--accent);border:1px solid rgba(79,142,247,0.3);border-radius:20px;padding:4px 14px;font-size:13px;margin-bottom:1.5rem}
+.hero-content h1{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:800;line-height:1.1;margin-bottom:1rem}
+.hero-content h1 span{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-desc{font-size:1.15rem;color:var(--muted);max-width:560px;margin-bottom:2rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:15px;transition:opacity .2s}
+.btn-primary:hover{opacity:.85}
+.btn-outline{border:1px solid var(--border);color:var(--text);padding:12px 28px;border-radius:8px;text-decoration:none;font-size:15px;transition:border-color .2s,color .2s}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+.hero-stats{display:flex;gap:2.5rem;margin-top:3rem;flex-wrap:wrap}
+.stat-val{font-size:2rem;font-weight:700;color:var(--accent)}
+.stat-lbl{font-size:13px;color:var(--muted)}
+
+/* SECTION HEADER */
+.section-header{margin-bottom:3rem}
+.section-tag{font-size:13px;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem}
+.section-header h2{font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700}
+.section-header p{color:var(--muted);margin-top:.5rem;max-width:500px}
+.divider{width:48px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;margin-top:1rem}
+
+/* ABOUT */
+#about{background:var(--surface)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.about-text p{color:var(--muted);margin-bottom:1rem}
+.about-text strong{color:var(--text)}
+.cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:1.5rem}
+.cert-badge{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:13px;font-weight:600;color:var(--accent)}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+.skill-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;transition:border-color .2s,transform .2s}
+.skill-card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.skill-icon{width:40px;height:40px;border-radius:10px;background:rgba(79,142,247,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:20px}
+.skill-card h3{font-size:15px;font-weight:600;margin-bottom:.75rem}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:12px;color:var(--muted)}
+
+/* EXPERIENCE */
+#experience{background:var(--surface)}
+.timeline{position:relative;padding-left:2rem}
+.timeline::before{content:'';position:absolute;left:0;top:8px;bottom:0;width:1px;background:linear-gradient(180deg,var(--accent),transparent)}
+.tl-item{position:relative;margin-bottom:2.5rem}
+.tl-dot{position:absolute;left:-2.4rem;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--bg)}
+.tl-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;transition:border-color .2s}
+.tl-card:hover{border-color:var(--accent)}
+.tl-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:.5rem;flex-wrap:wrap;gap:.5rem}
+.tl-title{font-size:16px;font-weight:700}
+.tl-period{font-size:12px;color:var(--accent);background:rgba(79,142,247,0.1);border:1px solid rgba(79,142,247,0.2);border-radius:20px;padding:2px 10px;white-space:nowrap}
+.tl-company{color:var(--muted);font-size:14px;margin-bottom:1rem}
+.tl-list{list-style:none;padding:0}
+.tl-list li{color:var(--muted);font-size:14px;padding:4px 0 4px 1.2rem;position:relative}
+.tl-list li::before{content:'›';position:absolute;left:0;color:var(--accent)}
+
+/* PROJECTS */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.project-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;transition:border-color .2s,transform .2s}
+.project-card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.project-card h3{font-size:16px;font-weight:700;margin-bottom:.75rem}
+.project-card p{color:var(--muted);font-size:14px;margin-bottom:1rem}
+
+/* ACHIEVEMENTS */
+#achievements{background:var(--surface)}
+.ach-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+.ach-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem}
+.ach-icon{font-size:24px;margin-bottom:.75rem}
+.ach-card p{color:var(--muted);font-size:14px;margin-top:.5rem}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:1rem}
+.contact-item{display:flex;align-items:center;gap:.75rem;color:var(--muted);font-size:15px;text-decoration:none;transition:color .2s}
+.contact-item:hover{color:var(--accent)}
+.contact-icon{width:40px;height:40px;border-radius:10px;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.form-group{margin-bottom:1rem}
+.form-group input,.form-group textarea{width:100%;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px 14px;color:var(--text);font-size:14px;font-family:inherit;outline:none;transition:border-color .2s}
+.form-group input:focus,.form-group textarea:focus{border-color:var(--accent)}
+.form-group textarea{height:120px;resize:vertical}
+.btn-send{width:100%;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:13px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;transition:opacity .2s}
+.btn-send:hover{opacity:.85}
+
+/* FOOTER */
+footer{background:var(--surface);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:14px}
+
+/* MOBILE */
+@media(max-width:700px){
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-stats{gap:1.5rem}
+  nav .nav-links{display:none}
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Gobinda Chandra Pradhan</h1>
-            <p class="contact-info">
-                Bhubaneswar, Odisha, India <br>
-                <a href="mailto:pradhangobinda8@gmail.com">pradhangobinda8@gmail.com</a> | 
-                <a href="https://www.linkedin.com/in/gobinda-chandra-pradhan-431848143/">LinkedIn</a> | 
-                9348429197
-            </p>
-        </div>
 
-        <div class="section">
-            <h2>Profile Summary</h2>
-            <p>Experienced Cyber Security Analyst with over 2.8 years of proven expertise in safeguarding organizational assets through comprehensive vulnerability assessments, threat detection, and incident response strategies. Skilled in utilizing advanced security tools and methodologies to analyze and mitigate risks, ensuring robust protection against cyber threats. Strong ability to collaborate cross-functionally, providing actionable recommendations to enhance IT security posture and regulatory compliance. Dedicated to staying abreast of emerging technologies and evolving threats to maintain proactive security measures.</p>
-        </div>
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <span class="logo">GCP</span>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="mailto:pradhangobinda8@gmail.com" class="btn-primary" style="font-size:13px;padding:8px 18px">Hire Me</a>
+  </div>
+</nav>
 
-        <div class="section">
-            <h2>Professional Experience</h2>
-            <div class="experience-header">
-                <h3>TATA Consultancy Services – Bhubaneswar</h3>
-                <span>23rd Dec 2021 - Present</span>
-            </div>
-            <h3>Vulnerability Management</h3>
-            <ul>
-                <li>Conducted Host discovery & Vulnerability scans using automated tools like Qualys and Nessus to identify security weaknesses in systems, networks, and Applications.</li>
-                <li>Maintained an up-to-date inventory of assets to ensure comprehensive coverage during vulnerability assessments. Created Dynamic Asset Tags Which Automatically discover and maintain an up-to-date inventory of all cloud instances, containers, and other assets across various cloud providers.</li>
-                <li>Analyzed scan results and prioritized vulnerabilities based on severity, exploitability, and potential impact on business operations.</li>
-                <li>Collaborated with stakeholders to establish risk tolerance levels and prioritize remediation efforts accordingly.</li>
-                <li>Provided guidance and support to technical teams on effective mitigation strategies and best practices for patch management.</li>
-                <li>Generated comprehensive reports on vulnerability assessment findings, including trends, KPIs, and remediation status. Created Multiple Widgets and Dashboards in Qualys & ServiceNow for Multiple Stakeholders showing Compliance trends, Monthly Patch status, and tracking Zero-day as well as Critical vulnerabilities Remediation Status.</li>
-                <li>Assessed systems against regulatory standards (such as PCI DSS, HIPAA) and internal security policies. Ensured systems adhere to security configurations and compliance requirements.</li>
-                <li>Integrated Qualys with other IT and security tools (like IBM QRoC and ServiceNow VR) to streamline processes and improve response times.</li>
-                <li>Deployed Cloud Agents on Servers, Workstations, Android & IOS devices, containers, and OT environments.</li>
-                <li>Maintained timely health checks of Physical and Virtual scanners and Cloud agents. Resolved Authentication issues and false positive queries.</li>
-            </ul>
-            
-            <h3>Penetration Testing</h3>
-            <ul>
-                <li>Performed onsite and remote security consulting including application testing, social engineering, wireless assessment Security scan, analysis, policies, and audit.</li>
-                <li>Strong Hands-on experience in Web Application penetration testing and network Infrastructure Penetration Testing.</li>
-                <li>Executed daily vulnerability assessments, threat assessments, mitigation, and reporting activities to safeguard information and ensure protection has been put in place on the systems.</li>
-                <li>Hands-on experience in Performing Ethical Hacking using commercial and non-commercial applications.</li>
-                <li>Performed as an Information Security Analyst and was involved in OWASP Top 10 Vulnerability Assessments of various internet-facing point-of-sale web applications and Web services.</li>
-                <li>Conducted Dynamic and Static Application Security Testing (SAST & DAST).</li>
-                <li>Provided fixes & filtering false findings for the vulnerabilities reported in the scan reports.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Skills & Abilities</h2>
-            <ul class="skills">
-                <li><strong>Technical:</strong> Vulnerability Management, Penetration Testing, Network Security, Cloud Security, SAST, DAST, Compliance Frameworks, OWASP, Python</li>
-                <li><strong>Software & Tools:</strong> Kali Linux, Tenable Nessus, Qualys VMDR, ServiceNow VR, GitHub, Wireshark, Metasploit, Nmap, Burp Suite, OWASP ZAP</li>
-                <li><strong>Soft Skills:</strong> Team Leadership, Training & Development, Strategic Planning, Risk Management, Presentation Skills, Problem Solving, Attention to Detail, Troubleshooting, Effective communication, and technical writing skills</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Education</h2>
-            <ul class="education">
-                <li><strong>Indira Gandhi Institute of Technology (IGIT), Sarang</strong> - Bachelor of Technology, Civil Engineering | 8.61 | 2016-2020</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Certifications & Courses</h2>
-            <ul class="certifications">
-                <li>Vulnerability Management Detection and Response | Qualys</li>
-                <li>Microsoft Certified: Azure Security Engineer Associate</li>
-                <li>Google Cloud Certified Associate Cloud Engineer</li>
-                <li>Python | Coding Ninjas</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Hobbies & Interests</h2>
-            <ul class="hobbies">
-                <li>Playing Cricket & Chess</li>
-                <li>Sports & Bike Riding</li>
-                <li>Stock Market Enthusiast</li>
-                <li>Music & Poetry</li>
-            </ul>
-        </div>
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-tag">🔒 Senior Security Analyst</div>
+      <h1>Gobinda<br><span>Chandra Pradhan</span></h1>
+      <p class="hero-desc">4.5+ years securing enterprise environments — vulnerability management, cloud security, and risk mitigation across AWS, Azure & OCI.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Get In Touch</a>
+        <a href="#projects" class="btn-outline">View Work</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-val">4.5+</div><div class="stat-lbl">Years Experience</div></div>
+        <div><div class="stat-val">7</div><div class="stat-lbl">Certifications</div></div>
+        <div><div class="stat-val">3</div><div class="stat-lbl">Cloud Platforms</div></div>
+        <div><div class="stat-val">2×</div><div class="stat-lbl">Award Winner</div></div>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <div class="section-header">
+          <div class="section-tag">About Me</div>
+          <h2>Securing Systems,<br>Reducing Risk</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="about-text">
+          <p>I'm a <strong>Senior Security Analyst at Tata Consultancy Services</strong>, Bhubaneswar, with deep expertise in vulnerability management, threat modeling, and compliance frameworks including <strong>CIS, PCI DSS, NIST, and ISO 27001</strong>.</p>
+          <p>I lead cross-functional teams to protect information assets, respond to security incidents, and drive continuous improvement in enterprise security posture across multi-cloud environments.</p>
+          <p>Outside of work, I enjoy gym, badminton, cricket, and chess.</p>
+        </div>
+      </div>
+      <div>
+        <div class="section-tag" style="margin-bottom:.75rem">Certifications</div>
+        <div class="cert-grid">
+          <div class="cert-badge">Insight VM</div>
+          <div class="cert-badge">CEH</div>
+          <div class="cert-badge">Qualys</div>
+          <div class="cert-badge">AZ-500</div>
+          <div class="cert-badge">GCP</div>
+          <div class="cert-badge">Linux LFCS101</div>
+          <div class="cert-badge">Python</div>
+        </div>
+        <div style="margin-top:1.5rem">
+          <div class="section-tag" style="margin-bottom:.75rem">Education</div>
+          <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem">
+            <div style="font-weight:700;font-size:15px">B.Tech — Civil Engineering</div>
+            <div style="color:var(--muted);font-size:13px;margin-top:4px">Indira Gandhi Institute of Technology (IGIT)</div>
+            <div style="color:var(--muted);font-size:13px">Apr 2016 – Jul 2020 &nbsp;·&nbsp; CGPA: 8.61</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Expertise</div>
+      <h2>Skills & Capabilities</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon">🛡️</div>
+        <h3>Security & Risk</h3>
+        <div class="tags">
+          <span class="tag">Vulnerability Management</span>
+          <span class="tag">Risk Management</span>
+          <span class="tag">Threat Modeling</span>
+          <span class="tag">Application Security</span>
+          <span class="tag">Compliance Auditing</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">☁️</div>
+        <h3>Cloud Security</h3>
+        <div class="tags">
+          <span class="tag">AWS</span>
+          <span class="tag">Azure</span>
+          <span class="tag">OCI</span>
+          <span class="tag">Wiz</span>
+          <span class="tag">Cloud Security Posture</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">⚙️</div>
+        <h3>Technical Skills</h3>
+        <div class="tags">
+          <span class="tag">Linux</span>
+          <span class="tag">Python</span>
+          <span class="tag">Shell Scripting</span>
+          <span class="tag">Qualys</span>
+          <span class="tag">OWASP Top 10</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Career</div>
+      <h2>Professional Experience</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-title">Senior Security Analyst</div>
+            <span class="tl-period">Dec 2021 – Present</span>
+          </div>
+          <div class="tl-company">Tata Consultancy Services · Bhubaneswar, Odisha</div>
+          <ul class="tl-list">
+            <li>Developed and managed scan policies to identify vulnerabilities in web apps and APIs, addressing OWASP Top 10 risks</li>
+            <li>Prepared audit-ready reports aligned with CIS, PCI DSS, NIST, and ISO 27001 standards</li>
+            <li>Monitored network traffic for suspicious activity and responded to potential security breaches</li>
+            <li>Assisted in incident response and investigation during security incidents and attacks</li>
+            <li>Reviewed application source code for vulnerabilities before deployment into production</li>
+            <li>Participated in threat intelligence activities — collecting IOCs, analyzing breaches, and identifying root causes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Work</div>
+      <h2>Featured Projects</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div style="margin-bottom:.75rem">
+          <span class="tag" style="color:var(--accent);border-color:rgba(79,142,247,0.3)">Cloud Security</span>
+          <span class="tag" style="margin-left:4px">Multi-Cloud</span>
+        </div>
+        <h3>Cloud Vulnerability Management & Risk Correlation (Wiz)</h3>
+        <p>Implemented centralized cloud security and vulnerability management using Wiz across AWS, Azure, and OCI. Identified and remediated toxic combinations such as public exposure and excessive IAM permissions. Correlated vulnerabilities across VMs, containers, and cloud configurations to prioritise real-world attack paths.</p>
+        <div class="tags">
+          <span class="tag">Wiz</span>
+          <span class="tag">AWS</span>
+          <span class="tag">Azure</span>
+          <span class="tag">OCI</span>
+          <span class="tag">IAM</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Recognition</div>
+      <h2>Achievements</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="ach-grid">
+      <div class="ach-card">
+        <div class="ach-icon">🏆</div>
+        <div style="font-weight:700">Special Initiative Award</div>
+        <p>Awarded for driving impactful security initiatives and delivering high performance in vulnerability management and enterprise risk reduction at TCS.</p>
+      </div>
+      <div class="ach-card">
+        <div class="ach-icon">🌟</div>
+        <div style="font-weight:700">Special Achievement Award</div>
+        <p>Recognised for consistently delivering excellence and leadership in vulnerability management and risk mitigation.</p>
+      </div>
+      <div class="ach-card">
+        <div class="ach-icon">⚡</div>
+        <div style="font-weight:700">TCS Elevate Wings 1</div>
+        <p>Successfully progressed from Ninja to Digital role designation, demonstrating commitment to continuous learning and upskilling.</p>
+      </div>
+      <div class="ach-card">
+        <div class="ach-icon">🎯</div>
+        <div style="font-weight:700">TCS HackQuest Committee</div>
+        <p>Served as a core committee member, contributing to the organisation and execution of TCS's competitive hacking challenge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Contact</div>
+      <h2>Get In Touch</h2>
+      <p>Open to new opportunities, collaborations, and consulting engagements.</p>
+      <div class="divider"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <a href="mailto:pradhangobinda8@gmail.com" class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <span>pradhangobinda8@gmail.com</span>
+        </a>
+        <a href="tel:9348429197" class="contact-item">
+          <div class="contact-icon">📞</div>
+          <span>+91 9348429197</span>
+        </a>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <span>Bhubaneswar, Odisha</span>
+        </div>
+        <a href="https://www.linkedin.com/in/gobinda-chandra-pradhan-431848143/" target="_blank" class="contact-item">
+          <div class="contact-icon">🔗</div>
+          <span>LinkedIn Profile</span>
+        </a>
+      </div>
+      <div>
+        <div class="form-group"><input type="text" placeholder="Your Name"/></div>
+        <div class="form-group"><input type="email" placeholder="Your Email"/></div>
+        <div class="form-group"><textarea placeholder="Your Message"></textarea></div>
+        <button class="btn-send">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Gobinda Chandra Pradhan · Built with purpose</p>
+</footer>
+
 </body>
 </html>
